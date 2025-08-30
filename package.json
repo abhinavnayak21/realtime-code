@@ -2,21 +2,16 @@
   "name": "realtime-editor",
   "version": "0.1.0",
   "private": true,
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "build": "react-scripts build",
-    "start:front": "react-scripts start",
-    "server:dev": "nodemon server.js",
-    "server:prod": "node server.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
   "dependencies": {
     "@codemirror/state": "^6.5.2",
     "@codemirror/view": "^6.38.1",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
     "@uiw/react-codemirror": "^4.25.1",
     "codemirror": "^5.65.20",
+    "eslint-plugin-react-hooks": "^6.1.0-canary-89a803fc-20250828",
     "express": "^5.1.0",
     "react": "^19.1.1",
     "react-avatar": "^5.0.4",
@@ -29,8 +24,40 @@
     "uuid": "^11.1.0",
     "web-vitals": "^2.1.4"
   },
+  "scripts": {
+    "start": "npm run build && npm run server:prod",
+    "start:front": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server:dev": "nodemon server.js",
+    "server:prod": "node server.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "nodemon": "^3.1.10",
-    "eslint-plugin-import": "^2.32.0"
-  }
+    "eslint-plugin-import": "^2.32.0",
+    "nodemon": "^3.1.10"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
