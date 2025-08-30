@@ -27,7 +27,7 @@
   "scripts": {
     "start": "npm run build && npm run server:prod",
     "start:front": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "NODE_OPTIONS=--max_old_space_size=1024 react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server:dev": "nodemon server.js",
